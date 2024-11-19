@@ -56,7 +56,7 @@ export function useMenuPageModel({httpClient}: useMenuPageModelProps) {
 
     const handleSelectItem = useCallback((id: string) => {
         const item = menuInformations?.sections.find(section => section.id.toString() === selectedTab)?.items.find(item => item.id.toString() === id)
-        dispatch(openModal({data: item, isOpen: true}))
+        dispatch(openModal({data: item ?? null, isOpen: true}))
         console.log(item)
     }, [menuInformations, selectedTab])
 
