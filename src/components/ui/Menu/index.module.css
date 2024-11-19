@@ -1,0 +1,9 @@
+.menuItem {
+    @apply min-w-[232px] py-[15px] text-center cursor-pointer md:border-white  
+}
+.menuItem:hover {
+    @apply md:border-b-4 
+}
+.menuItem[data-active="true"] {
+    @apply md:border-b-4 
+}
